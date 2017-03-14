@@ -235,9 +235,15 @@
     <Compile Include="Migrations\201703132206333_AddBuyerUserIdToOffers.Designer.cs">
       <DependentUpon>201703132206333_AddBuyerUserIdToOffers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703142133104_AddBookingModel.cs" />
+    <Compile Include="Migrations\201703142133104_AddBookingModel.Designer.cs">
+      <DependentUpon>201703142133104_AddBookingModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\BookingStatus.cs" />
     <Compile Include="Models\OfferStatus.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -334,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703132206333_AddBuyerUserIdToOffers.resx">
       <DependentUpon>201703132206333_AddBuyerUserIdToOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142133104_AddBookingModel.resx">
+      <DependentUpon>201703142133104_AddBookingModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
