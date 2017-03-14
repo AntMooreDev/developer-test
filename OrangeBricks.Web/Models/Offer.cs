@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OrangeBricks.Web.Models
@@ -17,5 +18,7 @@ namespace OrangeBricks.Web.Models
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public Property Property { get; set; }
     }
 }
