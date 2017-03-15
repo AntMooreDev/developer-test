@@ -172,6 +172,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Bookings\BookingsController.cs" />
+    <Compile Include="Controllers\Bookings\Builders\BookingsOnPropertyViewModelBuilder.cs" />
+    <Compile Include="Controllers\Bookings\ViewModels\BookingsOnPropertyViewModel.cs" />
     <Compile Include="Controllers\Property\Commands\MakeBookingCommand.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Offers\Builders\MyOffersViewModelBuilder.cs" />
@@ -312,12 +315,11 @@
     <None Include="Views\Account\UnAuthorized.cshtml" />
     <Content Include="Views\Offers\MyOffers.cshtml" />
     <Content Include="Views\Property\MakeBooking.cshtml" />
+    <Content Include="Views\Bookings\OnProperty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Bookings\Builders\" />
     <Folder Include="Controllers\Bookings\Commands\" />
-    <Folder Include="Controllers\Bookings\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
