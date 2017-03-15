@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using OrangeBricks.Web.Attributes;
@@ -86,6 +85,27 @@ namespace OrangeBricks.Web.Controllers.Property
         public ActionResult MakeOffer(MakeOfferCommand command)
         {
             var handler = new MakeOfferCommandHandler(_context);
+
+            command.BuyerUserId = User.Identity.GetUserId();
+
+            handler.Handle(command);
+
+            return RedirectToAction("Index");
+        }
+
+        [OrangeBricksAuthorize(Roles = "Buyer")]
+        public ActionResult MakeBooking(int id)
+        {
+            var builder = new MakeBookingViewModelBuilder(_context);
+            var viewModel = builder.Build(id);
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [OrangeBricksAuthorize(Roles = "Buyer")]
+        public ActionResult MakeBooking(MakeBookingCommand command)
+        {
+            var handler = new MakeBookingCommandHandler(_context);
 
             command.BuyerUserId = User.Identity.GetUserId();
 

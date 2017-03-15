@@ -1,0 +1,26 @@
+﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.MakeBookingViewModel
+
+@{
+    ViewBag.Title = "Make Booking";
+}
+
+<h2>Make Booking</h2>
+
+<p>When would you like to view the @Model.PropertyType property on @Model.StreetName?</p>
+
+@using (Html.BeginForm("MakeBooking", "Property", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.BookingDate, "Date of Viewing", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.Hidden("PropertyId", Model.PropertyId)
+            @Html.TextBoxFor(m => m.BookingDate, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary" value="Make Booking" />
+        </div>
+    </div>
+
+}
