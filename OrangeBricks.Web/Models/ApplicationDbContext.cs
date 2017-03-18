@@ -19,6 +19,9 @@ namespace OrangeBricks.Web.Models
         public IDbSet<Property> Properties { get; set; }
         public IDbSet<Offer> Offers { get; set; }
         public IDbSet<Booking> Booking { get; set; }
+        public IDbSet<Notification> Notifications { get; set; }
+        public IDbSet<NotificationObject> NotificationObjects { get; set; }
+        public IDbSet<NotificationChange> NotificationChanges { get; set; }
 
         public new void SaveChanges()
         {
@@ -31,6 +34,9 @@ namespace OrangeBricks.Web.Models
         IDbSet<Property> Properties { get; set; }
         IDbSet<Offer> Offers { get; set; }
         IDbSet<Booking> Booking { get; set; }
+        IDbSet<Notification> Notifications { get; set; }
+        IDbSet<NotificationObject> NotificationObjects { get; set; }
+        IDbSet<NotificationChange> NotificationChanges { get; set; }
 
         void SaveChanges();
     }
