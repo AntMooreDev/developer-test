@@ -254,6 +254,10 @@
     <Compile Include="Migrations\201703181534567_AddNotificationTables.Designer.cs">
       <DependentUpon>201703181534567_AddNotificationTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703181714377_AddDatesToNotificationTable.cs" />
+    <Compile Include="Migrations\201703181714377_AddDatesToNotificationTable.Designer.cs">
+      <DependentUpon>201703181714377_AddDatesToNotificationTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -368,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703181534567_AddNotificationTables.resx">
       <DependentUpon>201703181534567_AddNotificationTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703181714377_AddDatesToNotificationTable.resx">
+      <DependentUpon>201703181714377_AddDatesToNotificationTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
