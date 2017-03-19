@@ -10,8 +10,6 @@ namespace OrangeBricks.Web.Models
         public Guid Id { get; set; }
         public Notification Notification { get; set; }
         public string Object { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
+        public string ObjectId { get; set; }
     }
 }
