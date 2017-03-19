@@ -32,7 +32,10 @@
                         }
                         if (User.IsInRole("Buyer"))
                         {
-                            <li>@Html.ActionLink("My Offers", "MyOffers", "Offers")</li>
+                            @Html.React("MyOffers", new {
+                                Url = Url.Action("MyOffers", "Offers"),
+                                Text = "My Offers"
+                            }, "li")
                         }
 
                     }
@@ -51,6 +54,12 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
     @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/LayoutComponents")
+    @Html.ReactInitJavaScript()
 </body>
 </html>
