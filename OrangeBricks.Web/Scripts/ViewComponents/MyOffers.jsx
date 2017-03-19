@@ -1,12 +1,16 @@
 ﻿var MyOffers = React.createClass({
     getInitialState: function () {
-        return { data: this.props.intialData }
+        return { data: this.props.initialData }
     },
-    getBadge: function() {
+    fetchNotifications: function() {
+        // Get notifications from the server
+    },
+    componentDidMount: function() {
+        window.setInterval(this.fetchNotifications, 30000);
     },
     render: function () {
         return (
-            <a href={this.props.Url}>{this.props.Text}</a>
+            <a href={this.state.data.Url}>{this.state.data.Text}</a>
         );
     }
 });
