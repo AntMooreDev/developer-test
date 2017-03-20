@@ -9,6 +9,7 @@ namespace OrangeBricks.Web.Models
     {
         public Guid Id { get; set; }
         public Notification Notification { get; set; }
+        public IList<NotificationChange> NotificationChanges { get; set; }
         public string Object { get; set; }
         public string ObjectId { get; set; }
     }

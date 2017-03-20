@@ -234,6 +234,8 @@
     <Compile Include="Controllers\Bookings\Commands\RejectBookingCommand.cs" />
     <Compile Include="Controllers\Bookings\Commands\RejectBookingCommandHandler.cs" />
     <Compile Include="Controllers\Bookings\ViewModels\BookingsOnPropertyViewModel.cs" />
+    <Compile Include="Controllers\Notifications\Commands\CreateOfferNotificationCommand.cs" />
+    <Compile Include="Controllers\Notifications\Commands\CreateOfferNotificationCommandHandler.cs" />
     <Compile Include="Controllers\Property\Commands\MakeBookingCommand.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Offers\Builders\MyOffersViewModelBuilder.cs" />
@@ -395,6 +397,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Notifications\Builders\" />
+    <Folder Include="Controllers\Notifications\ViewModels\" />
+    <Folder Include="Views\Notifications\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
