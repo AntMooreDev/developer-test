@@ -22,6 +22,7 @@ namespace OrangeBricks.Web.Controllers.Notifications.Builders
             var notifications = _context.Notifications
                 .Include(x => x.NotificationObjects)
                 .Where(n => n.UserId == Id
+                    && n.Status == NotificationStatus.Unread
                     && n.NotificationObjects.Any(no => no.Object == "Offer"))
                 .ToList();
 
