@@ -31,6 +31,9 @@ namespace OrangeBricks.Web
             bundles.Add(new BabelBundle("~/bundles/LayoutComponents").Include(
                       "~/Scripts/ViewComponents/MyOffers.jsx"));
 
+            bundles.Add(new ScriptBundle("~/bundles/utilities").Include(
+                      "~/Scripts/Bardic.js"));
+
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
             BundleTable.EnableOptimizations = true;

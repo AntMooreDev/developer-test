@@ -1,0 +1,15 @@
+﻿@model int?
+
+@{ 
+    int notificationCount = Model ?? 0;
+}
+
+@Html.React("MyOffers", new
+{
+    initialData = new
+    {
+        Url = Url.Action("MyOffers", "Offers"),
+        Text = "My Offers",
+        NotificationCount = notificationCount
+    }
+}, "li")

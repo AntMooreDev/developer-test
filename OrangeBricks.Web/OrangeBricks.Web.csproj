@@ -234,8 +234,11 @@
     <Compile Include="Controllers\Bookings\Commands\RejectBookingCommand.cs" />
     <Compile Include="Controllers\Bookings\Commands\RejectBookingCommandHandler.cs" />
     <Compile Include="Controllers\Bookings\ViewModels\BookingsOnPropertyViewModel.cs" />
+    <Compile Include="Controllers\Notifications\Builders\AllMyOffersNotificationViewModelBuilder.cs" />
     <Compile Include="Controllers\Notifications\Commands\CreateOfferNotificationCommand.cs" />
     <Compile Include="Controllers\Notifications\Commands\CreateOfferNotificationCommandHandler.cs" />
+    <Compile Include="Controllers\Notifications\NotificationsController.cs" />
+    <Compile Include="Controllers\Notifications\ViewModels\AllMyOffersNotificationViewModel.cs" />
     <Compile Include="Controllers\Property\Commands\MakeBookingCommand.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Offers\Builders\MyOffersViewModelBuilder.cs" />
@@ -344,6 +347,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\Bardic.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -394,11 +398,10 @@
     <Content Include="Views\Offers\MyOffers.cshtml" />
     <Content Include="Views\Property\MakeBooking.cshtml" />
     <Content Include="Views\Bookings\OnProperty.cshtml" />
+    <Content Include="Views\Shared\MyOffers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Notifications\Builders\" />
-    <Folder Include="Controllers\Notifications\ViewModels\" />
     <Folder Include="Views\Notifications\" />
   </ItemGroup>
   <ItemGroup>

@@ -32,10 +32,7 @@
                         }
                         if (User.IsInRole("Buyer"))
                         {
-                            @Html.React("MyOffers", new { initialData = new {
-                                Url = Url.Action("MyOffers", "Offers"),
-                                Text = "My Offers"}
-                            }, "li")
+                            Html.RenderAction("GetAllOffersNotificationCountForCurrentUserView", "Notifications");
                         }
 
                     }
@@ -54,6 +51,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/utilities")
 
     <script src="https://unpkg.com/react@15/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
